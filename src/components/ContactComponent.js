@@ -51,14 +51,19 @@ class Contact extends Component {
       errors.lastname = "Last Name should be <= 10 characters";
     }
 
-    const reg = /^\d+&/;
-    if (this.state.touched.telnum && !reg.test(telnum) && ) {
+    
+    if (
+      this.state.touched.telnum &&
+      telnum.split("").filter((x) => !isNaN(x)).length !== telnum.length
+    ) {
       errors.telnum = "Tel. Number should only contain numbers";
+      
     }
-    else if(this.state.touched && telnum.length!=8 )
+    else if(this.state.touched.telnum && telnum.length !== 8)
     {
-      errors.telnum ="Tel. Number should exactly contain 8 digits";
+      errors.telnum = "Tel. Number should exactly contain  8 digits"; 
     }
+
     if (
       this.state.touched.email &&
       email.split("").filter((x) => x === "@").length !== 1
