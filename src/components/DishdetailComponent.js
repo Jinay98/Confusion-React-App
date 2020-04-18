@@ -15,9 +15,9 @@ import {
   Col,
   Label,
 } from "reactstrap";
-import { Loading } from "./LoadingComponent";
 import { Control, LocalForm, Errors } from "react-redux-form";
 import { Link } from "react-router-dom";
+import { Loading } from "./LoadingComponent";
 import { baseUrl } from "../shared/baseUrl";
 import { FadeTransform, Fade, Stagger } from "react-animation-components";
 
@@ -159,11 +159,10 @@ function RenderComments({ comments, postComment, dishId }) {
     return (
       <div className="col-12 col-md-5 m-1">
         <h4>Comments</h4>
-
         <Stagger in>
           {comments.map((comment) => {
             return (
-              <Fade in>
+              <Fade in key={comment.id}>
                 <li key={comment.id}>
                   <p>{comment.comment}</p>
                   <p>

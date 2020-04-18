@@ -7,12 +7,11 @@ import {
   Breadcrumb,
   BreadcrumbItem,
 } from "reactstrap";
-import { Loading } from "./LoadingComponent";
 import { Link } from "react-router-dom";
+import { Loading } from "./LoadingComponent";
 import { baseUrl } from "../shared/baseUrl";
 
-
-function RenderMenuItem({ dish }) {
+function RenderMenuItem({ dish, onClick }) {
   return (
     <Card>
       <Link to={`/menu/${dish.id}`}>
@@ -24,12 +23,11 @@ function RenderMenuItem({ dish }) {
     </Card>
   );
 }
-
 const Menu = (props) => {
   const menu = props.dishes.dishes.map((dish) => {
     return (
-      <div key={dish.id} className="col-12 col-md-5 m-1">
-        <RenderMenuItem dish={dish} />
+      <div className="col-12 col-md-5 m-1" key={dish.id}>
+        <RenderMenuItem dish={dish} onClick={props.onClick} />
       </div>
     );
   });
