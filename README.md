@@ -1,4 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+A Restaurant Management Web Application developed using React.js <br />
+The application fetches data from a Json Webserver hosted at 127.0.0.1:3001  
+
+# Screenshots
+
+### Home Page <br /><br/>
+![home-page](https://user-images.githubusercontent.com/32198451/79863264-1291e980-83f5-11ea-979b-a56e063206a0.png)
+<br/><br/><br/>
+
+### Menu Page <br/><br/>
+![menu-page](https://user-images.githubusercontent.com/32198451/79863336-35bc9900-83f5-11ea-936f-1523dcc5836b.png)
+<br/><br/><br/>
+
+### Dish Details Page <br/><br/>
+![detailed-menu](https://user-images.githubusercontent.com/32198451/79863481-75838080-83f5-11ea-9818-00ac6b21155f.png)
+<br/><br/><br/>
+
+### Contact Us Page <br/><br />
+![contact-us](https://user-images.githubusercontent.com/32198451/79863564-964bd600-83f5-11ea-9a7f-22b3e1149a0d.png)
+<br/><br/><br/>
+
 
 ## Available Scripts
 
